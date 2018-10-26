@@ -66,3 +66,5 @@ If characters are entered instead of numbers the following message will appear:
 Please type numbers between 1 and 6
 ```
 
+## Acknowledgements
+Jay Snellen – Skeleton designer of the program itself
