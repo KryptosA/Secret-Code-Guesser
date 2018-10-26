@@ -23,10 +23,10 @@ string code = "0000"
 
 while (digit < CODE_LENGTH) {
 		
-		code[digit] += randint(min,max);
+	code[digit] += randint(min,max);
 		
-		++digit;	
-	}
+	++digit;	
+}
 ```
 Local variables are declared for storing the secret code and player code as well as the copies of the code 
 among variables for correct and incorrect digits.
@@ -54,3 +54,15 @@ When you win you will be asked to play again. The case of the digit does not mat
 ```
 Would you like to play again (Y/N)? 
 ```
+
+### Error handling
+There are certain built in methods for error handling.
+If the code length is too long an error for matching the specific code length will appear.
+```
+ERROR: Code must be exactly " << CODE_LENGTH << " digits long!\n\n
+```
+If characters are entered instead of numbers the following message will appear:
+```
+Please type numbers between 1 and 6
+```
+
