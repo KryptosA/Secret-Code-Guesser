@@ -9,15 +9,24 @@ The program is run via an executable and will display in the command console wit
 The game will ask for a sequence of 4 digits and there will be two columns for correct and misplaced. The two columns indicate the number correct and the number wrong. If the correct number cannot be guessed within 12 tries you lose and have to start over.
 ## Code Walkthrough
 ### Constant Definitions are declared
+The maximum code length is four digits and the digits are between 1 and 6. The maximum number of guesses is 12.
 ```
 const int CODE_SPAN = 6;
 const int CODE_LENGTH = 4;
 const int MAX_GUESSES = 12;
 ```
 ### Main Function
-A random number generator is declared
+A random number is generated using the empty code string. New numbers are appended to it using a for loop to generate each digit.
+This will build random code of length CODE_LENGTH, with digits within range specified by CODE_SPAN. 
 ```
-srand( time(NULL) );
+string code = "0000"
+
+while (digit < CODE_LENGTH) {
+		
+		code[digit] += randint(min,max);
+		
+		++digit;	
+	}
 ```
 Local variables are declared for storing the secret code and player code as well as the copies of the code 
 among variables for correct and incorrect digits.
@@ -37,11 +46,11 @@ If the correct number is guessed while below the maximum guess number a message 
 Similarly if the player fails to guess the correct code a message displaying that the player failed shows up.
 
 ### Inputs
-The game will query for your code input which is just a 4 digit number
+The game will query for your code input which is just a 4 digit number.
 ```
 Enter Code: 
 ```
-When you win you will be asked to play again
+When you win you will be asked to play again. The case of the digit does not matter.
 ```
 Would you like to play again (Y/N)? 
 ```
