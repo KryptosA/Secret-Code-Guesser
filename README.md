@@ -7,4 +7,10 @@ number generation.
 The program is run via an executable and will display in the command console with instructions on how to play. 
 ### Playing the Game
 The game will ask for a sequence of 4 digits and there will be two columns for correct and misplaced. The two columns indicate the number correct and the number wrong. If the correct number cannot be guessed within 12 tries you lose and have to start over.
-## Inputs for the game
+## Code Walkthrough
+Constant Definitions are declared
+'''
+const int CODE_SPAN = 6;
+const int CODE_LENGTH = 4;
+const int MAX_GUESSES = 12;
+'''
